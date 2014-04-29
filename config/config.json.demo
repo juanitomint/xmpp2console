@@ -1,0 +1,25 @@
+{
+	"client": 
+	{
+		"jid": "somebot@test.com/xmpp.bot",
+		"password": "your_password",
+		"host": "talk.google.com",
+		"port": 5222
+	},
+
+	"enabledJIDs": 
+	[
+		"admin1@gmail.com",
+		"test@test.com",
+	],
+
+	"appsDir": "./",
+	"enableLog": false,
+	"predefCmds": 
+	{
+	"init":[
+		"hostname",
+		"uname -a"
+	]
+	}
+}

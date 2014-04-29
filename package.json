@@ -1,0 +1,36 @@
+{
+  "name": "xmpp2console",
+  "version": "0.1.0",
+  "description": "Simple xmpp client that executes commands to console",
+  "main": "app.js",
+  "dependencies": {
+    "connect-flash": "~0.1.1",
+    "execSync": "~1.0.1-pre",
+    "ltx": "~0.5.0",
+    "node-stringprep": "~0.2.3",
+    "node-xmpp": "~1.0.0-alpha1",
+    "node-xmpp-client": "~1.0.0-alpha2",
+    "node-xmpp-core": "~1.0.0-alpha1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanitomint/xmpp2console.git"
+  },
+  "keywords": [
+    "xmpp",
+    "console",
+    "shell",
+    "execute",
+    "listen",
+    "bot"
+  ],
+  "author": "Borda Juan Ignacio",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/juanitomint/xmpp2console/issues"
+  }
+}
