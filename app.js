@@ -10,6 +10,8 @@
 console.log(".-------------------------------.");
 console.log("| * Starting XMPP BOT service * |");
 console.log("'-------------------------------'");
+console.log("|Node.js "+process.versions.node+"                |");
+console.log("'-------------------------------'");
 
 var path = require('path');
 var fs = require('fs');
