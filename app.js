@@ -17,12 +17,18 @@ var sh = require('execSync');
 var xmpp = require('./index')
 var argv = process.argv
 var baseDir = path.dirname(fs.realpathSync(__filename)) + '/';
-console.log("'LOADING CONFIG:'");
+console.log("LOADING CONFIG:"+baseDir + 'config/config.json');
 var data = fs.readFileSync(baseDir + 'config/config.json');
 var config = JSON.parse(data);
+
 var listen = true;
 var client = new xmpp.Client(config.client);
-process.cwd(config.appsDir);
+/*
+ * Set working dir
+ */
+console.log("Seting working dir to:"+config.appsDir);
+process.chdir(config.appsDir);
+
 client.on('online', function() {
 	console.log('online')
 	client.send(new xmpp.Element('presence', {}).c('show').t('chat').up().c(
@@ -68,6 +74,17 @@ client
 											+ cmd_arr.join(' '));
 
 									switch (cmd) {
+									case "cd":
+										try {
+											process.chdir(config.appsDir+cmd_arr[1]);
+											result="changed working dir to: "+process.cwd();	  
+											}
+											catch (err) {
+											  result='chdir  '+ cmd_arr[1] +' '+ err;
+											}
+										
+										
+										break;
 									case "sleep":
 										/*
 										 * Bot will stop listening for commands
