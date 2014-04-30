@@ -15,7 +15,9 @@ npm install
 Configuration:
 --------------
 
-see included:
+rename config/config.json.demo to config/config.json
+
+take a look inside
 
     config/config.json
 
