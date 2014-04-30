@@ -10,7 +10,7 @@
 	"enabledJIDs": 
 	[
 		"admin1@gmail.com",
-		"test@test.com",
+		"test@test.com"
 	],
 
 	"appsDir": "./",
